@@ -1,0 +1,34 @@
+2020-06-27 01:49:28: <br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\frame_8.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrspec.php</b> on line <b>568</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_0\mask_49_0.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_1\mask_49_1.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_2\mask_49_2.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_3\mask_49_3.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_4\mask_49_4.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_5\mask_49_5.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_6\mask_49_6.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
+<br />
+<b>Warning</b>:  mkdir(): No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>154</b><br />
+<br />
+<b>Warning</b>:  file_put_contents(C:\Apache24\htdocs\qr-generator\phpqrcode\cache\mask_7\mask_49_7.dat): failed to open stream: No such file or directory in <b>C:\Apache24\htdocs\qr-generator\phpqrcode\qrmask.php</b> on line <b>155</b><br />
