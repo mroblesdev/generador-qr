@@ -9,12 +9,12 @@
 		</div>
 	</fieldset>
 	<div class="form-group">
-		<label for="telefono">N&uacute;mero tel&eacute;fonico:</label>
-		<input type="tel" class="form-control" id="telefono" />
+		<label for="sms_numero">N&uacute;mero tel&eacute;fonico:</label>
+		<input type="tel" class="form-control" id="sms_numero" name="sms_numero" />
 	</div>
 	<div class="form-group">
-		<label for="mensaje">Mensaje:</label>
-		<textarea class="form-control" id="mensaje" maxlength="160" aria-describedby="mensajeHelp"></textarea>
-		<small id="mensajeHelp" class="form-text text-muted">Máximo 160 caracteres.</small>
+		<label for="sms_mensaje">Mensaje:</label>
+		<textarea class="form-control"  id="sms_mensaje" name="sms_mensaje" maxlength="160" aria-describedby="smsMensajeHelp"></textarea>
+		<small id="smsMensajeHelp" class="form-text text-muted">Máximo 160 caracteres.</small>
 	</div>
 </div>

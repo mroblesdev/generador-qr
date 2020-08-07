@@ -9,32 +9,46 @@
 		</div>
 	</fieldset>
 	
-	<div class="form-group">
-		<label for="nombre">Nombre:</label>
-		<input type="text" class="form-control" id="nombre" />
+	<div class="form-row">
+		<div class="form-group col-md-12">
+			<label for="vc_nombre">Nombre:</label>
+			<input type="text" class="form-control" id="vc_nombre" name="vc_nombre" />
+		</div>
 	</div>
 	
-	<div class="form-group">
-		<label for="cargo">Cargo:</label>
-		<input type="text" class="form-control" id="cargo" />
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="vc_empresa">Compa&ntilde;a:</label>
+			<input type="text" class="form-control" id="vc_empresa" name="vc_empresa" />
+		</div>
+		<div class="form-group col-md-6">
+			<label for="vc_cargo">Cargo:</label>
+			<input type="text" class="form-control" id="vc_cargo" name="vc_cargo" />
+		</div>
 	</div>
 	
-	<div class="form-group">
-		<label for="web">Web:</label>
-		<input type="url" class="form-control" id="web" />
+	<div class="form-row">
+		<div class="form-group col-md-12">
+			<label for="vc_web">Web:</label>
+			<input type="url" class="form-control" id="vc_web" name="vc_web" />
+		</div>
 	</div>
 	
-	<div class="form-group">
-		<label for="direccion">Direcci&oacute;n:</label>
-		<input type="text" class="form-control" id="direccion" />
+	<div class="form-row">
+		<div class="form-group col-md-12">
+			<label for="vc_direccion">Direcci&oacute;n:</label>
+			<input type="text" class="form-control" id="vc_direccion" name="vc_direccion" />
+		</div>
 	</div>
 	
-	<div class="form-group">
-		<label for="campo">N&uacute;mero tel&eacute;fonico:</label>
-		<input type="tel" class="form-control" id="campo" />
-	</div>
-	<div class="form-group">
-		<label for="email">Correo electr&oacute;nico:</label>
-		<input type="email" class="form-control" id="email" />
-	</div>
-</div>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="vc_telefono">N&uacute;mero tel&eacute;fonico:</label>
+			<input type="tel" class="form-control" id="vc_telefono" name="vc_telefono" />
+		</div>
+		<div class="form-group col-md-6">
+			<label for="vc_email">Correo electr&oacute;nico:</label>
+			<input type="email" class="form-control" id="vc_email" name="vc_email" />
+		</div>
+	</div>								
+</div>								

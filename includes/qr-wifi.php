@@ -9,21 +9,23 @@
 		</div>
 	</fieldset>
 	<div class="form-group">
-		<label for="ssid">Nombre de red (SSID):</label>
-		<input type="text" class="form-control" id="ssid" />
+		<label for="wifi_ssid">Nombre de red (SSID):</label>
+		<input type="text" class="form-control" id="wifi_ssid" name="wifi_ssid" />
 	</div>
 	
-	<div class="form-group">
-		<label for="password">Contrase&ntilde;a:</label>
-		<input type="text" class="form-control" id="password" />
-	</div>
-	
-	<div class="form-group">
-		<label for="seguridad">Tipo de seguridad:</label>
-		<select class="form-control" id="seguridad">
-			<option id="WEP">WEP</option>
-			<option id="WPA">WPA</option>
-			<option id="NO">Sin contrase&ntilde;a</option>
-		</select>
-	</div>
-</div>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="wifi_password">Contrase&ntilde;a:</label>
+			<input type="text" class="form-control" id="wifi_password" name="wifi_password" />
+		</div>
+		
+		<div class="form-group col-md-6">
+			<label for="wifi_seguridad">Tipo de seguridad:</label>
+			<select class="form-control" id="wifi_seguridad" name="wifi_seguridad">
+				<option value="WEP">WEP</option>
+				<option value="WPA">WPA</option>
+				<option value="">Sin contrase&ntilde;a</option>
+			</select>
+		</div>	
+	</div>	
+</div>	

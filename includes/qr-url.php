@@ -9,7 +9,7 @@
 		</div>
 	</fieldset>
 	<div class="form-group">
-		<label for="url">URL:</label>
-		<input type="url" class="form-control" id="url" />
+		<label for="url_url">URL:</label>
+		<input type="url" class="form-control" id="url_url" name="url_url" />
 	</div>
 </div>

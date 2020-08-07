@@ -9,8 +9,7 @@
 		</div>
 	</fieldset>
 	<div class="form-group">
-		<label for="telefono">Telefono:</label>
-		<input type="tel" class="form-control" id="telefono" maxlength="15" />
-		
+		<label for="tel_numero">Telefono:</label>
+		<input type="tel" class="form-control" id="tel_numero" name="tel_numero" maxlength="15" />
 	</div>
 </div>

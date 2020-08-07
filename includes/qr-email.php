@@ -10,19 +10,18 @@
 	</fieldset>
 	
 	<div class="form-group">
-		<label for="email">Correo electr&oacute;nico:</label>
-		<input type="email" class="form-control" id="email" />
+		<label for="email_email">Correo electr&oacute;nico:</label>
+		<input type="email" class="form-control" id="email_email" name="email_email" />
 	</div>
 	
 	<div class="form-group">
-		<label for="asunto">Asunto:</label>
-		<input type="text" class="form-control" id="asunto" />
+		<label for="email_asunto">Asunto:</label>
+		<input type="text" class="form-control" id="email_asunto" name="email_asunto" />
 	</div>
 	
 	<div class="form-group">
-		<label for="mensaje">Mensaje:</label>
-		<textarea class="form-control" id="mensjae" maxlength="200" aria-describedby="mensajeHelp"></textarea>
-		<small id="mensajeHelp" class="form-text text-muted">Máximo 200 caracteres.</small>
+		<label for="email_mensjae">Mensaje:</label>
+		<textarea class="form-control" id="email_mensjae" name="email_mensjae" maxlength="200" aria-describedby="emailMensajeHelp"></textarea>
+		<small id="emailMensajeHelp" class="form-text text-muted">Máximo 200 caracteres.</small>
 	</div>
-	
 </div>

@@ -9,8 +9,8 @@
 		</div>
 	</fieldset>
 	<div class="form-group">
-		<label for="texto">Texto:</label>
-		<textarea class="form-control" id="texto" maxlength="1000" aria-describedby="textoHelp"></textarea>
+		<label for="txt_texto">Texto:</label>
+		<textarea class="form-control" id="txt_texto" name="txt_texto" maxlength="1000" aria-describedby="textoHelp"></textarea>
 		<small id="textoHelp" class="form-text text-muted">Máximo 1000 caracteres.</small>
 	</div>
 </div>
