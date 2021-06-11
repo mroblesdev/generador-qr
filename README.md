@@ -1,6 +1,9 @@
-# Generar de Códigos QR
+# Generador de códigos QR
 
-Aplicación Web para generar códigos QR personalizados para Texto, Url, teléfonos, SMS, direcciones de GPS, WIFI y mucho más.
+Aplicación Web para generar y descargar códigos QR personalizados para Texto, Url, teléfonos, SMS, direcciones de GPS, WIFI y mucho más.
+
+![image](https://user-images.githubusercontent.com/25091013/121706000-d3ac7080-ca9a-11eb-8bcf-d2270004ccb6.png)
+
 
 ## Dependencias utilizadas 🖥
 - PHP
