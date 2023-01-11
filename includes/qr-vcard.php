@@ -50,5 +50,5 @@
 			<label for="vc_email">Correo electr&oacute;nico:</label>
 			<input type="email" class="form-control" id="vc_email" name="vc_email" />
 		</div>
-	</div>								
-</div>								
+	</div>
+</div>

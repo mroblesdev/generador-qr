@@ -26,6 +26,6 @@
 				<option value="WPA">WPA</option>
 				<option value="">Sin contrase&ntilde;a</option>
 			</select>
-		</div>	
-	</div>	
-</div>	
+		</div>
+	</div>
+</div>

@@ -24,5 +24,5 @@
 			<div id="mensaje" style="color:black"></div>
 			<div id="errores" style="color:red"></div>
 		</div>
-	</div>	
+	</div>
 </div>

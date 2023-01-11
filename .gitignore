@@ -1,0 +1,4 @@
+temp/
+!temp/index.php
+
+phpqrcode/*errors.txt
