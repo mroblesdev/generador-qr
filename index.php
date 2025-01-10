@@ -1,8 +1,10 @@
 <?php
 
 /**
- * Sistema generador de códigos QR 1.0
- * Desarrollado por Marco Robles 2023
+ * Sistema generador de códigos QR
+ * @version 1.0
+ * @link https://qr.codigosdeprogramacion.com
+ * @author Marco Robles 2023-2025
  * https://github.com/mroblesdev
  *
  * Se utiliza la biblioteca PHP QR Code
@@ -26,7 +28,8 @@ $dir = dirname(__FILE__) . '/includes';
 	<link rel="icon" href="images/favicon.png" sizes="32x32" />
 	<title>Generador QR - MRoblesDev</title>
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="css/estilo.css">
 
 </head>
@@ -37,87 +40,210 @@ $dir = dirname(__FILE__) . '/includes';
 
 		<div class="row">
 			<div class="col">
-				<h3 class="titulo"><b>Generador de códigos QR - MRoblesDev</b></h3>
+				<h3><strong>Generador de códigos QR - MRoblesDev</strong></h3>
 			</div>
 		</div>
 
-		<br />
+		<div id="alert_placeholder"></div>
 
-		<div class="row">
+		<div class="row mt-3">
 			<div class="col">
 
 				<form id="form_qr">
-					<nav>
-						<div class="nav nav-tabs" id="nav-tab" role="tablist">
-							<a class="nav-link active" id="nav-texto-tab" data-toggle="tab" href="#nav-texto" role="tab" aria-controls="nav-texto" aria-selected="true"><i class="fas fa-file-alt"></i> Texto</a>
-							<a class="nav-link" id="nav-url-tab" data-toggle="tab" href="#nav-url" role="tab" aria-controls="nav-url" aria-selected="false"><i class="fas fa-globe"></i> URL</a>
-							<a class="nav-link" id="nav-telefono-tab" data-toggle="tab" href="#nav-telefono" role="tab" aria-controls="nav-telefono" aria-selected="false"><i class="fas fa-phone"></i> Tel&eacute;fono</a>
-							<a class="nav-link" id="nav-vcard-tab" data-toggle="tab" href="#nav-vcard" role="tab" aria-controls="nav-vcard" aria-selected="false"><i class="fas fa-id-card"></i> Vcard</a>
-							<a class="nav-link" id="nav-sms-tab" data-toggle="tab" href="#nav-sms" role="tab" aria-controls="nav-sms" aria-selected="false"><i class="fas fa-sms"></i> SMS</a>
-							<a class="nav-link" id="nav-email-tab" data-toggle="tab" href="#nav-email" role="tab" aria-controls="nav-email" aria-selected="false"><i class="fas fa-envelope-square"></i> Email</a>
-							<a class="nav-link" id="nav-gps-tab" data-toggle="tab" href="#nav-gps" role="tab" aria-controls="nav-gps" aria-selected="false"><i class="fas fa-map-marked-alt"></i> GPS</a>
-							<a class="nav-link" id="nav-wifi-tab" data-toggle="tab" href="#nav-wifi" role="tab" aria-controls="nav-wifi" aria-selected="false"><i class="fas fa-wifi"></i> WIFI</a>
-						</div>
-					</nav>
+					<ul class="nav nav-tabs" id="myTabs">
+						<li class="nav-item">
+							<button class="nav-link active" id="texto-tab" data-bs-toggle="tab" data-bs-target="#texto-tab-pane" type="button" role="tab" aria-controls="texto-tab-pane" aria-selected="true"><i class="fa-solid fa-file-lines"></i> Texto</button>
+						</li>
+						<li class="nav-item">
+							<button class="nav-link" id="url-tab" data-bs-toggle="tab" data-bs-target="#url-tab-pane" type="button" role="tab" aria-controls="url-tab-pane" aria-selected="true"><i class="fa-solid fa-link"></i> URL</button>
+						</li>
+						<li class="nav-item">
+							<button class="nav-link" id="phone-tab" data-bs-toggle="tab" data-bs-target="#phone-tab-pane" type="button" role="tab" aria-controls="phone-tab-pane" aria-selected="true"><i class="fa-solid fa-phone"></i> Teléfono</button>
+						</li>
+						<li class="nav-item">
+							<button class="nav-link" id="sms-tab" data-bs-toggle="tab" data-bs-target="#sms-tab-pane" type="button" role="tab" aria-controls="sms-tab-pane" aria-selected="true"><i class="fa-solid fa-comment-sms"></i> SMS</button>
+						</li>
+						<li class="nav-item">
+							<button class="nav-link" id="whatsapp-tab" data-bs-toggle="tab" data-bs-target="#whatsapp-tab-pane" type="button" role="tab" aria-controls="whatsapp-tab-pane" aria-selected="true"><i class="fa-brands fa-whatsapp"></i> Whatsapp</button>
+						</li>
+						<li class="nav-item">
+							<button class="nav-link" id="wifi-tab" data-bs-toggle="tab" data-bs-target="#wifi-tab-pane" type="button" role="tab" aria-controls="wifi-tab-pane" aria-selected="true"><i class="fa-solid fa-wifi"></i> WIFI</button>
+						</li>
+					</ul>
 
-					<div class="tab-content" id="nav-tabContent">
-						<?php
-						require $dir . '/qr-texto.php';
-						require $dir . '/qr-url.php';
-						require $dir . '/qr-telefono.php';
-						require $dir . '/qr-sms.php';
-						require $dir . '/qr-vcard.php';
-						require $dir . '/qr-email.php';
-						require $dir . '/qr-gps.php';
-						require $dir . '/qr-wifi.php';
-						?>
+					<div class="row">
+						<div class="col-8">
+
+							<div class="tab-content">
+								<div class="tab-pane fade show active" id="texto-tab-pane">
+									<fieldset>
+										<legend class="mb-3">
+											<h5>Código QR para texto</h5>
+										</legend>
+
+										<div class="alert alert-info" role="alert">
+											Introduce un texto para generar un código QR
+										</div>
+									</fieldset>
+
+									<div>
+										<label for="txt_texto" class="form-label">Texto:</label>
+										<textarea class="form-control" id="txt_texto" name="txt_texto" aria-describedby="textoHelp"></textarea>
+										<div id="textoHelp" class="form-text">Máximo 1000 caracteres.</div>
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="url-tab-pane">
+									<fieldset>
+										<legend>
+											<h5>Código QR para una dirección web</h5>
+										</legend>
+
+										<div class="alert alert-info" role="alert">
+											Introduce una dirección web para generar un código QR.
+										</div>
+									</fieldset>
+									<div>
+										<label for="url_url">URL:</label>
+										<input type="url" class="form-control" id="url_url" name="url_url">
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="phone-tab-pane">
+									<fieldset>
+										<legend>
+											<h5>Código QR para telefono</h5>
+										</legend>
+
+										<div class="alert alert-info" role="alert">
+											Introduce un número teléfonico para generar un código QR.
+										</div>
+									</fieldset>
+									<div>
+										<label for="tel_numero">Teléfono:</label>
+										<input type="tel" class="form-control" id="tel_numero" name="tel_numero" maxlength="15">
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="sms-tab-pane">
+									<fieldset>
+										<legend>
+											<h5>Código QR para SMS</h5>
+										</legend>
+
+										<div class="alert alert-info" role="alert">
+											Introduce un número teléfonico y un mensaje para generar un código QR.
+										</div>
+									</fieldset>
+									<div>
+										<label for="sms_numero">Número teléfonico:</label>
+										<input type="tel" class="form-control" id="sms_numero" name="sms_numero" />
+									</div>
+									<div>
+										<label for="sms_mensaje">Mensaje:</label>
+										<textarea class="form-control" id="sms_mensaje" name="sms_mensaje" maxlength="160" aria-describedby="smsMensajeHelp"></textarea>
+										<small id="smsMensajeHelp" class="form-text text-muted">Máximo 160 caracteres.</small>
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="whatsapp-tab-pane">
+									<fieldset>
+										<legend>
+											<h5>Código QR para enviar mensaje WhatsApp</h5>
+										</legend>
+
+										<div class="alert alert-info" role="alert">
+											Introduce un número teléfonico y un mensaje para generar un código QR.
+										</div>
+									</fieldset>
+									<div>
+										<label for="sms_numero">Número teléfonico:</label>
+										<input type="tel" class="form-control" id="whatsapp_numero" name="whatsapp_numero">
+									</div>
+									<div>
+										<label for="sms_mensaje">Mensaje:</label>
+										<textarea class="form-control" id="whatsapp_mensaje" name="whatsapp_mensaje"></textarea>
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="wifi-tab-pane">
+									<fieldset>
+										<legend>
+											<h5>Código QR para WIFI</h5>
+										</legend>
+
+										<div class="alert alert-info" role="alert">
+											Introduce el nombre de la red (SSID), la contraseña de la red y el tipo de encriptación de seguridad de la red para generar un código QR.
+										</div>
+									</fieldset>
+									<div>
+										<label for="wifi_ssid">Nombre de red (SSID):</label>
+										<input type="text" class="form-control" id="wifi_ssid" name="wifi_ssid" />
+									</div>
+
+									<div class="row mt-3">
+										<div class="col">
+
+											<label for="wifi_password">Contraseña:</label>
+											<input type="text" class="form-control" id="wifi_password" name="wifi_password" />
+										</div>
+
+										<div class="col">
+											<label for="wifi_seguridad">Tipo de seguridad:</label>
+											<select class="form-select" id="wifi_seguridad" name="wifi_seguridad">
+												<option value="WEP">WEP</option>
+												<option value="WPA">WPA/WPA2</option>
+												<option value="">Sin contraseña</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="row">
+								<div class="col my-3">
+									<a data-bs-toggle="tooltip" data-bs-title="Selecciona el tamaño del código QR"><i class="fas fa-info-circle"></i></a>
+									<label for="tamanio">Tamaño:</label>
+
+									<select class="form-select" id="tamanio" name="tamanio">
+										<?php for ($size = 1; $size <= 10; $size++) { ?>
+											<option value="<?= $size; ?>" <?php echo ($size == 5) ? 'selected' : ''; ?>><?= $size; ?></option>
+										<?php } ?>
+									</select>
+								</div>
+								<div class="col my-3">
+									<a data-bs-toggle="tooltip" data-bs-title="Nivel ECC (capacidad de corrección de errores). Esto compensa la suciedad, daños o borrosidad del código de barras. Un alto nivel de ECC agrega más redundancia a costa de usar más espacio"><i class="fas fa-info-circle"></i></a>
+									<label for="ecc">Redundancia:</label>
+									<select class="form-select" id="ecc" name="ecc">
+										<option value="L">Baja</option>
+										<option value="M" selected>Media</option>
+										<option value="Q">Alta</option>
+										<option value="H">Muy alta</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col text-center">
+									<img id="img-qr" alt="QRCode">
+								</div>
+							</div>
+
+							<div class="my-3">
+								<button type="submit" class="btn btn-primary"><i class="fa-solid fa-qrcode"></i> Generar código QR</button>
+								<button type="button" id="descargar" class="btn btn-success"><i class="fa-solid fa-download"></i> Descargar código QR</button>
+							</div>
+						</div>
 					</div>
-
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<a data-toggle="tooltip" title="Selecciona el tamaño del código QR"><i class="fas fa-info-circle"></i></a>
-							<label for="campo">Tamaño:</label>
-
-							<select class="form-control" id="tamanio" name="tamanio">
-								<?php for ($a = 1; $a < 11; $a++) { ?>
-									<option value="<?= $a; ?>" <?php if ($a == 5) echo 'selected'; ?>><?= $a; ?></option>
-								<?php } ?>
-							</select>
-						</div>
-						<div class="form-group col-md-6">
-							<a data-toggle="tooltip" title="Nivel ECC (capacidad de corrección de errores). Esto compensa la suciedad, daños o borrosidad del código de barras. Un alto nivel de ECC agrega más redundancia a costa de usar más espacio"><i class="fas fa-info-circle"></i></a>
-							<label for="campo">Redundancia:</label>
-							<select class="form-control" id="ecc" name="ecc">
-								<option value="L">Baja</option>
-								<option value="M" selected>Media</option>
-								<option value="Q">Alta</option>
-								<option value="H">Muy alta</option>
-							</select>
-						</div>
-					</div>
-
-					<input type="hidden" id="tab-activo" name="tab-activo" value="nav-texto-tab" />
-
-					<button type="button" id="generar" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Generar código QR</button>
-					<button type="button" id="descargar" class="btn btn-success"><i class="fas fa-download"></i> Descargar código QR</button>
-
 				</form>
-
-				<div class="row qr">
-					<img id="img-qr" alt="QRCode" />
-					<a id="link-img" download="qr-code.png" hidden></a>
-				</div>
 			</div>
 		</div>
 	</div>
 
-	<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" data-auto-replace-svg="nest"></script>
-	<script src="js/jquery-3.5.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIm6sL7CVJU8A94dY6KVMkZOxNJSdkelg">
-	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 	<script src="js/functions.js"></script>
 
 </body>
