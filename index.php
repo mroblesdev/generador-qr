@@ -72,7 +72,7 @@ $dir = dirname(__FILE__) . '/includes';
 					</ul>
 
 					<div class="row">
-						<div class="col-8">
+						<div class="col-12 col-md-8">
 
 							<div class="tab-content">
 								<div class="tab-pane fade show active" id="texto-tab-pane">
@@ -201,7 +201,7 @@ $dir = dirname(__FILE__) . '/includes';
 							</div>
 						</div>
 
-						<div class="col-4">
+						<div class="col-12 col-md-4">
 							<div class="row">
 								<div class="col my-3">
 									<a data-bs-toggle="tooltip" data-bs-title="Selecciona el tamaño del código QR"><i class="fas fa-info-circle"></i></a>
