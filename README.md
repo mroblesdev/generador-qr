@@ -30,7 +30,7 @@ Sigue estos pasos para configurar el proyecto en tu servidor local:
     - Si estás en un servidor remoto: `http://direccion_ip/generador-qr`
 
 ## 👨‍💻 Autores
-- **Marko Robles** - *Desarrollo* - [markorobles](https://github.com/mroblesdev)
+- [MRoblesDev](https://github.com/mroblesdev) - *Desarrollo y Mantenimiento*
 
 ## 🙏 Agradecimientos
 
