@@ -2,7 +2,7 @@
 
 Aplicación Web para generar y descargar códigos QR personalizados. Soporta texto, URLs, números telefónicos, SMS, WhatsApp, redes WiFi y mucho más.
 
-![image](https://user-images.githubusercontent.com/25091013/121706000-d3ac7080-ca9a-11eb-8bcf-d2270004ccb6.png)
+![image](https://github.com/user-attachments/assets/e9221334-bcda-49f2-a2cd-b30150a1356b)
 
 ## 🚀 Características
 - Soporta múltiples tipos de datos: texto, enlaces, números, Wi-Fi, SMS, WhatsApp, entre otros.
