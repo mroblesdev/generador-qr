@@ -50,6 +50,7 @@ if ($_POST) {
 		case 'whatsapp-tab-pane':
 			$telefono = htmlspecialchars($_POST["whatsapp_numero"], ENT_QUOTES);
 			$mensaje = htmlspecialchars($_POST["whatsapp_mensaje"], ENT_QUOTES, 'UTF-8');
+			$mensaje = validaLongitudTexto($mensaje, 500);
 			$datos = 'https://wa.me/' . $telefono . '/?text=' . $mensaje;
 			break;
 

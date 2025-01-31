@@ -21,8 +21,8 @@ $dir = dirname(__FILE__) . '/includes';
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Generador QR - MRoblesDev" />
-	<meta property="og:description" content="Genera códigos QR de forma automática." />
+	<meta property="og:title" content="Generador de códigos QR - MRoblesDev" />
+	<meta property="og:description" content="Genera códigos QR de forma automática. Soporta texto, URLs, números telefónicos, SMS, WhatsApp, redes WiFi y mucho más" />
 	<meta property="og:site_name" content="Generador QR - MRoblesDev" />
 	<meta property="og:locale" content="es_ES" />
 	<link rel="icon" href="images/favicon.png" sizes="32x32" />
@@ -40,13 +40,13 @@ $dir = dirname(__FILE__) . '/includes';
 
 		<div class="row">
 			<div class="col">
-				<h3><strong>Generador de códigos QR - MRoblesDev</strong></h3>
+				<h3><strong>Generador de códigos QR</strong></h3>
 			</div>
 		</div>
 
 		<div id="alert_placeholder"></div>
 
-		<div class="row mt-3">
+		<div class="row my-3">
 			<div class="col">
 
 				<form id="form_qr">
@@ -77,7 +77,7 @@ $dir = dirname(__FILE__) . '/includes';
 							<div class="tab-content">
 								<div class="tab-pane fade show active" id="texto-tab-pane">
 									<fieldset>
-										<legend class="mb-3">
+										<legend>
 											<h5>Código QR para texto</h5>
 										</legend>
 
@@ -86,10 +86,10 @@ $dir = dirname(__FILE__) . '/includes';
 										</div>
 									</fieldset>
 
-									<div>
+									<div class="mb-3">
 										<label for="txt_texto" class="form-label">Texto:</label>
-										<textarea class="form-control" id="txt_texto" name="txt_texto" aria-describedby="textoHelp"></textarea>
-										<div id="textoHelp" class="form-text">Máximo 1000 caracteres.</div>
+										<textarea class="form-control" id="txt_texto" name="txt_texto" maxlength="500" aria-describedby="textoHelp"></textarea>
+										<div id="textoHelp" class="form-text">Máximo 500 caracteres.</div>
 									</div>
 								</div>
 
@@ -103,7 +103,8 @@ $dir = dirname(__FILE__) . '/includes';
 											Introduce una dirección web para generar un código QR.
 										</div>
 									</fieldset>
-									<div>
+
+									<div class="mb-3">
 										<label for="url_url">URL:</label>
 										<input type="url" class="form-control" id="url_url" name="url_url">
 									</div>
@@ -119,7 +120,8 @@ $dir = dirname(__FILE__) . '/includes';
 											Introduce un número teléfonico para generar un código QR.
 										</div>
 									</fieldset>
-									<div>
+
+									<div class="mb-3">
 										<label for="tel_numero">Teléfono:</label>
 										<input type="tel" class="form-control" id="tel_numero" name="tel_numero" maxlength="15">
 									</div>
@@ -135,11 +137,13 @@ $dir = dirname(__FILE__) . '/includes';
 											Introduce un número teléfonico y un mensaje para generar un código QR.
 										</div>
 									</fieldset>
-									<div>
+
+									<div class="mb-3">
 										<label for="sms_numero">Número teléfonico:</label>
 										<input type="tel" class="form-control" id="sms_numero" name="sms_numero" />
 									</div>
-									<div>
+
+									<div class="mb-3">
 										<label for="sms_mensaje">Mensaje:</label>
 										<textarea class="form-control" id="sms_mensaje" name="sms_mensaje" maxlength="160" aria-describedby="smsMensajeHelp"></textarea>
 										<small id="smsMensajeHelp" class="form-text text-muted">Máximo 160 caracteres.</small>
@@ -156,13 +160,16 @@ $dir = dirname(__FILE__) . '/includes';
 											Introduce un número teléfonico y un mensaje para generar un código QR.
 										</div>
 									</fieldset>
-									<div>
+
+									<div class="mb-3">
 										<label for="sms_numero">Número teléfonico:</label>
 										<input type="tel" class="form-control" id="whatsapp_numero" name="whatsapp_numero">
 									</div>
-									<div>
+
+									<div class="mb-3">
 										<label for="sms_mensaje">Mensaje:</label>
-										<textarea class="form-control" id="whatsapp_mensaje" name="whatsapp_mensaje"></textarea>
+										<textarea class="form-control" id="whatsapp_mensaje" name="whatsapp_mensaje" aria-describedby="whatsappHelp" maxlength="500"></textarea>
+										<div id="whatsappHelp" class="form-text">Máximo 500 caracteres.</div>
 									</div>
 								</div>
 
@@ -176,14 +183,14 @@ $dir = dirname(__FILE__) . '/includes';
 											Introduce el nombre de la red (SSID), la contraseña de la red y el tipo de encriptación de seguridad de la red para generar un código QR.
 										</div>
 									</fieldset>
-									<div>
+
+									<div class="mb-3">
 										<label for="wifi_ssid">Nombre de red (SSID):</label>
 										<input type="text" class="form-control" id="wifi_ssid" name="wifi_ssid" />
 									</div>
 
 									<div class="row mt-3">
 										<div class="col">
-
 											<label for="wifi_password">Contraseña:</label>
 											<input type="text" class="form-control" id="wifi_password" name="wifi_password" />
 										</div>
@@ -209,7 +216,7 @@ $dir = dirname(__FILE__) . '/includes';
 
 									<select class="form-select" id="tamanio" name="tamanio">
 										<?php for ($size = 1; $size <= 10; $size++) { ?>
-											<option value="<?= $size; ?>" <?php echo ($size == 5) ? 'selected' : ''; ?>><?= $size; ?></option>
+											<option value="<?= $size; ?>" <?php echo ($size == 7) ? 'selected' : ''; ?>><?= $size; ?></option>
 										<?php } ?>
 									</select>
 								</div>
